@@ -15,22 +15,39 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'solair_theme' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'solair_theme' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'solair_theme' ), 'solair_theme', '<a href="http://balleio.com">Ballelio</a>' );
-				?>
+           
+		<div><?php the_custom_logo();?></div>
+		<div class="footer-contact-name">
+                    <?php printf( esc_html__( 'SolAir Cargo Express' 
+                                         ));
+				?></div>	
+                <div class="footer-contact">         
+                        <li><?php printf( esc_html__(
+                                '5141 NW 79 Ave. Unit 9' ));?></li>
+                        <li><?php printf( esc_html__(
+                                                'Miami, FL 33166' ));?></li>
+                        <li><?php printf( esc_html__(
+                                                'Ph: +1 (305) 594 9011' ));?></li>
+                        <li><?php printf( esc_html__(
+                                                'Bogotá: +57 (1) 489 9102' ));?></li>
+                        <li><?php printf( esc_html__(
+                                                'sales@solaircargousa.com' ));
+                                        ?></li></div>		
+                                           
 		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+                
+                <!-- footer menu - social-media -->
+                     <div id="social-media" class="menu-social-media-container"   <?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-2',
+				'menu_id'        => 'social-media',
+			) );
+			?></div>
+                
+<?php wp_footer(); ?>
+	
 </div><!-- #page -->
 
-<?php wp_footer(); ?>
-
+</footer><!-- #colophon -->
 </body>
 </html>

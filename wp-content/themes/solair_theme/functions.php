@@ -45,6 +45,7 @@ if ( ! function_exists( 'solair_theme_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Header', 'solair_theme' ),
+                        'menu-2' => esc_html__( 'Footer', 'solair_theme' ),
                         
 		) );
 
@@ -187,10 +188,10 @@ add_action( 'widgets_init', 'solair_theme_widgets_init' );
  */
 function solair_theme_scripts() {
         
-        wp_enqueue_style('solair-fonts', solair_theme_fonts_url() );
+        wp_enqueue_style( 'solair-fonts', solair_theme_fonts_url() );
+        
+         wp_enqueue_style( 'solair_theme-style', get_stylesheet_uri() );
     
-	wp_enqueue_style( 'solair_theme-style', get_stylesheet_uri() );
-
 	wp_enqueue_script( 'solair_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
 
         wp_localize_script ( 'solair_theme-navigation', 'solair_themeScreenReaderText', array( 'expand' => __('Expand child menu', 'solair_theme'),

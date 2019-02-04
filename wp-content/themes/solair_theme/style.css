@@ -710,9 +710,7 @@ a:hover, a:active {
 
 .main-navigation ul ul a {
 	width: 100%;
-        text-align:justify;
-        
-        
+        text-align:justify;        
 }
 
 .main-navigation ul li:hover > ul,
@@ -983,7 +981,7 @@ h1.site-title {
             border: 3px solid white;
             border-radius: 40px;  
             width:45px;
-            height:45px;              
+            height:45px;            
 }
 
 a.custom-logo-link{
@@ -1003,6 +1001,69 @@ p.site-description{
             width:100%;
 }
 
+/*==============FOOTER=================*/
+
+footer#colophon.site-footer{
+    background:rgba(255, 185, 0,1);
+    color:#fff;
+    padding:2em;
+    width:100%;
+}
+footer{
+    width:100%;
+}
+
+#colophon img{
+    margin: 0 0 1em 0;
+    border: 3px solid white;
+    border-radius: 120px;
+    width:45px;
+    height:45px;
+    }
+ 
+   /* #colophon a.custom-logo-link{
+            justify-content:left;
+    }*/
+    
+ div.footer-contact-name{
+        font-family:'Roboto', sans-serif;
+        font-size:1.5em;
+        font-weight:700;
+        padding-bottom:.5em;
+    }
+
+div.footer-contact{
+        font-size:1em;
+        font-weight:400;
+        list-style:none;
+        padding-bottom:2em;
+    }
+
+#social-media{
+    list-style:none;
+    display:flex;
+    align-content:center;
+    text-align:center;
+    margin:0 auto;
+    }  
+    
+    #social-media li {
+       padding: .35em;
+       background-color: #fff;
+       margin-right:.75em;
+       border-radius:120px;
+ 
+    }   
+    
+    #social-media a{
+    color:rgba(255, 185, 0,1);
+    
+   }
+  ul.menu{
+       padding-left:0;
+   }
+ 
+   
 
 /*--------------------------------------------------------------
 ## Posts and pages
@@ -1146,7 +1207,11 @@ header#masthead.site-header{
     li#menu-item-1636{
     margin-top:0;
    }
-
+/*===========FOOTER===============*/
+    
+    #colophon a.custom-logo-link{
+            justify-content:left;
+    }
 }
 
 @media screen and (min-width: 922px){
@@ -1173,7 +1238,11 @@ header#masthead.site-header{
         padding: 0 1.75em;
     }
     
+    /*===========FOOTER===============*/
     
+    #colophon a.custom-logo-link{
+            justify-content:left;
+    }
 }
 /*--------------------------------------------------------------
 ## Captions
