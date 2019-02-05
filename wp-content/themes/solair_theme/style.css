@@ -1009,8 +1009,9 @@ footer#colophon.site-footer{
     padding:2em;
     width:100%;
 }
-footer{
-    width:100%;
+
+.site-info{
+    width:50%;
 }
 
 #colophon img{
@@ -1021,10 +1022,6 @@ footer{
     height:45px;
     }
  
-   /* #colophon a.custom-logo-link{
-            justify-content:left;
-    }*/
-    
  div.footer-contact-name{
         font-family:'Roboto', sans-serif;
         font-size:1.5em;
@@ -1051,7 +1048,7 @@ div.footer-contact{
        padding: .35em;
        background-color: #fff;
        margin-right:.75em;
-       border-radius:120px;
+       border-radius:5px;
  
     }   
     
@@ -1207,11 +1204,62 @@ header#masthead.site-header{
     li#menu-item-1636{
     margin-top:0;
    }
+   
 /*===========FOOTER===============*/
     
-    #colophon a.custom-logo-link{
-            justify-content:left;
+footer{
+    display:flex;
+}
+#colophon img{
+    margin: 0 0 1em 0;
+    border: 5px solid white;
+    border-radius: 120px;
+    width:75px;
+    height:75px;
     }
+    
+#colophon a.custom-logo-link{
+            justify-content:left;
+ 
+    }
+    
+div.footer-contact-name{
+        font-size:1.75em;
+        padding-bottom:.5em;
+    }
+
+div.footer-contact{
+        font-size:1.25em;      
+        padding-bottom:2em;
+    }
+
+#social-media.menu-social-media-container{
+    margin:0;
+    padding:0;
+}
+
+#social-media{
+    width:50%;
+    padding: .3em;
+    font-size:1.35em;
+    margin:0 auto;  
+    height:100px;
+    justify-content:flex-end;
+    align-items:baseline;
+}
+    
+    #social-media li {
+       padding: .35em;
+       background-color: #fff;
+       border-radius:8px;
+ 
+    }
+    
+    ul#social-media.menu{
+        margin:0;
+        padding:0;
+    }
+    
 }
 
 @media screen and (min-width: 922px){
@@ -1240,10 +1288,7 @@ header#masthead.site-header{
     
     /*===========FOOTER===============*/
     
-    #colophon a.custom-logo-link{
-            justify-content:left;
-    }
-}
+    
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/

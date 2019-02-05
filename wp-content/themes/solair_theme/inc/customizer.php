@@ -23,7 +23,7 @@ function solair_theme_customize_register( $wp_customize ) {
 		$wp_customize->selective_refresh->add_partial( 'blogdescription', array(
 			'selector'        => '.site-description',
 			'render_callback' => 'solair_theme_customize_partial_blogdescription',
-		) );
+		) );              
 	}
 }
 add_action( 'customize_register', 'solair_theme_customize_register' );
