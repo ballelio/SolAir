@@ -193,6 +193,12 @@ function solair_theme_scripts() {
          wp_enqueue_style( 'solair_theme-style', get_stylesheet_uri() );
     
 	wp_enqueue_script( 'solair_theme-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+        
+        wp_enqueue_script( 'solair_theme-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20190209', true );
+        
+        wp_enqueue_script( 'solair_theme-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20190219', true );
+        
+          wp_enqueue_script( 'solair_theme-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20190219', true );
 
         wp_localize_script ( 'solair_theme-navigation', 'solair_themeScreenReaderText', array( 'expand' => __('Expand child menu', 'solair_theme'),
     'Collapse' => __('Collapse child menu', 'solair_theme')

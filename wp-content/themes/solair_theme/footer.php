@@ -40,7 +40,7 @@
                      <div id="social-media" class="menu-social-media-container"   <?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-2',
-				'menu_id'        => 'social-media',
+				'menu_id'        => 'social-media'
 			) );
 			?></div>
                 

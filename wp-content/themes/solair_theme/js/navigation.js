@@ -63,7 +63,28 @@
 	 * Sets or removes .focus class on an element.
 	 */
         
-        
+        // When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+// Get the main-navigation
+var mainNavigation = document.getElementById('site-navigation');
+
+// Get the offset position of the navbar
+var sticky = mainNavigation.offsetTop;
+
+// Add the sticky class to the main-navigation when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    mainNavigation.classList.add('sticky');
+  } else {
+    mainNavigation.classList.remove('sticky');
+  }
+}
+
+
+
+
+
         
 	function toggleFocus() {
 		var self = this;

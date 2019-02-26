@@ -395,28 +395,33 @@ input,
 select,
 optgroup,
 textarea {
-	color: red;
+	color: #404040;
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size:16px;
         font-size:1rem;
 	line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h2{
         font-family: 'Lato', sans-serif;
 	clear: both;
 }
 
-h1{font-size: 2.75em;}
-h2{font-size: 2.5em;}
-h3{font-size: 2.25em;}
-h4{font-size: 2em;}
-h5{font-size: 1.75em;}
-h6{font-size: 1.5em;}
+h1, h3, h4, h5, h6 {
+        font-family: 'Roboto Condensed', sans-serif;
+	clear: both;
+}
+
+h1{font-size: 2.5em;}
+h2{font-size: 2.25em;}
+h3{font-size: 2em;}
+h4{font-size: 1.75em;}
+h5{font-size: 1.5em;}
+h6{font-size: 1.25em;}
 
 p {
 	margin-bottom: 1.25em;
-        color:blueviolet;
+        color:#404040;
 }
 
 dfn, cite, em, i {
@@ -491,7 +496,7 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em .125em;
 }
 
 ul {
@@ -505,7 +510,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 1em;
 }
 
 dt {
@@ -624,10 +629,6 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 
-nav#site-navigation.main-navigation{
-    
-}
-
  #site-navigation {
         width:100%;
         background-color:rgba(75,75,75,1);
@@ -640,26 +641,36 @@ nav#site-navigation.main-navigation{
         text-decoraton:none;
     }
     
-    #site-navigation a:hover, a:focus, a:active{c
+    #site-navigation a:hover, a:focus, a:active{
         color:white;
-        text-decoration: underline;
-        text-decoration-color:orange;
+        text-decoration:none;
+        margin-bottom:-2px;     
+        border-bottom: solid rgb(255, 185, 0) 2px;
+ 
         
     }
+
+    /* The sticky class is added to the header with JS when it reaches its scroll position */
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        margin-bottom:10em;
+}
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: orange;
+	color: rgba(255, 185, 0,1);
         text-decoration:none;
 }
 
 a:visited {
-	color: orange;
+	color: rgba(255, 185, 0,1);
 }
 
 a:hover, a:focus, a:active {
-	color: orange;
+	color: rgba(255, 185, 0,1);
         text-decoration: underline;
         text-decoration-color:inherit;             
 }
@@ -672,6 +683,14 @@ a:hover, a:active {
 	outline: 0;
 }
 
+h4 a, h4 a:hover, h4 a:focus, h4 a:active, h4 a:visited {
+    color:#5a5a5a;
+    text-decoration:none;
+    border-bottom: solid rgb(255, 185, 0) 3px;
+   
+}
+
+
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -679,7 +698,7 @@ a:hover, a:active {
 .main-navigation {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 700;
-        border-bottom: 2px solid orange;
+        border-bottom: 5px solid rgba(255, 185, 0,1);;
 	
 }
 
@@ -687,9 +706,7 @@ a:hover, a:active {
 	display: none;
         list-style: none;
         margin: 1em 0 0 0;
-        padding-top: 1em;
-        /*padding-left: 0;*/
-        
+        padding-top: 1em; 
 }
 
 .main-navigation ul ul {
@@ -729,7 +746,7 @@ a:hover, a:active {
         text-decoration: none;
         align-items:center;
         justify-content:center;
-        border-bottom: 1px solid orange;
+        border-bottom: 1px solid rgba(255, 185, 0,1);;
 }
 
 
@@ -758,7 +775,7 @@ a:hover, a:active {
 
 button.dropdown-toggle {
 	position: absolute;
-	border-bottom: 1px solid orange;
+	border-bottom: 1px solid rgba(255, 185, 0,1);
 	color: yellow;       
 	line-height: 1.5em;
 	padding: .2em 1em .2em 1em;        
@@ -770,7 +787,7 @@ button.menu-toggle{
     position: absolute;
     padding: .6em 0;
     border-color: rgba(75,75,75,1);
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid rgba(255, 185, 0,1);;
 }
 
 .menu-toggle {
@@ -782,13 +799,13 @@ button.menu-toggle{
         font-family: 'Roboto', sans-serif;
         font-weight:700;
 	font-size: 80%;
-	color: orange;
-	border-bottom: 2px solid orange;
+	color: rgba(255, 185, 0,1);
+	border-bottom: 2px solid rgba(255, 185, 0,1);
 }
 
 .menu-toggle a{
     text-align:justify;
-    border-bottom: 2px solid orange;
+    border-bottom: 2px solid rgba(255, 185, 0,1);
  
 }
 
@@ -829,7 +846,7 @@ li#menu-item-1636{
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	border-radius: 3px;
-	/*box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);*/
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
 	clip-path: none;
 	color: red;
@@ -878,31 +895,6 @@ li#menu-item-1636{
 /*--------------------------------------------------------------
 # Clearings
 --------------------------------------------------------------*/
-.clear:before,
-.clear:after,
-.entry-content:before,
-.entry-content:after,
-.comment-content:before,
-.comment-content:after,
-.site-header:before,
-.site-header:after,
-.site-content:before,
-.site-content:after,
-.site-footer:before,
-.site-footer:after {
-	content: "";
-	display: table;
-	table-layout: fixed;
-}
-
-.clear:after,
-.entry-content:after,
-.comment-content:after,
-.site-header:after,
-.site-content:after,
-.site-footer:after {
-	clear: both;
-}
 
 /*--------------------------------------------------------------
 # Widgets
@@ -923,6 +915,26 @@ li#menu-item-1636{
 .site-content{
     padding: 1.5em;}
 
+h1, h3, h5, h6 {
+        color:rgba(255, 185, 0,1);
+    }
+    
+h2{color:#5a5a5a;}   
+
+h4{ font-size:120%;
+    color:#5A5A5A;
+}    
+    
+h2 { font-size:180%;
+    }
+    
+    h1, h3, h5, h6 {
+        font-size:150%;
+        padding:0;
+    }
+
+
+    
 /*======header========*/
 
 header#masthead.site-header{
@@ -967,10 +979,10 @@ figure {
     margin-top:5px;
 }
 
-.site-branding a{
+/*.site-branding a{
     font-size:.7em;
     line-height:.7em;
-}
+}*/
 
 h1.site-title {
     margin:0;
@@ -1003,15 +1015,15 @@ p.site-description{
 
 /*==============FOOTER=================*/
 
-footer#colophon.site-footer{
+footer#colophon{
     background:rgba(255, 185, 0,1);
     color:#fff;
     padding:2em;
     width:100%;
 }
 
-.site-info{
-    width:50%;
+.site-footer.site-info{
+    width:70%;
 }
 
 #colophon img{
@@ -1025,12 +1037,14 @@ footer#colophon.site-footer{
  div.footer-contact-name{
         font-family:'Roboto', sans-serif;
         font-size:1.5em;
+        line-height:1em;
         font-weight:700;
         padding-bottom:.5em;
     }
 
 div.footer-contact{
         font-size:1em;
+        line-height:1.15em;
         font-weight:400;
         list-style:none;
         padding-bottom:2em;
@@ -1089,6 +1103,46 @@ div.footer-contact{
 	margin: 0 0 1.5em;
 }
 
+/*#post-1 h2.entry-title{
+    border-top: none;  
+    padding-top:0;
+    margin-top:0;
+}*/
+
+
+h2.entry-title a{
+    color:#5A5A5A;
+    text-decoration:none;
+}    
+
+figure.fullwidth-image{
+    margin: 0 -1.5em;
+}
+
+    div#servicios{
+            height:75px;
+            border-bottom:none;
+}
+
+    div#casillero,
+    div#agentes,
+    div#rastreo,
+    div#contactenos,
+    div#compania{
+            height:75px;
+            margin-top:.25em;
+            padding-bottom: .25em;
+            border-bottom: rgb(255, 185, 0) solid 5px;
+    }
+    
+p.address a{
+        color:#404040; 
+        text-decoration:none;
+        border-bottom: solid rgb(255, 185, 0) 3px;
+    }
+    
+  
+
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
@@ -1139,14 +1193,48 @@ object {
 	display: inline-block;
 }
 
+@media screen and (max-width: 320px){
+    div.mapita{
+    width:320px;
+    margin:0 -1.5em 0 -1.5em;
+}
+iframe.fullwidth-image{
+    margin: 1em -1.5em;
+    max-width:320px;
+}
+
+li#menu-item-2023{
+    padding-top:1.25em;
+}
+div#content.site-content{
+    margin-bottom:-4.25em;
+}
+
+}
+
+@media screen and (max-width: 576px){
+    li#menu-item-2023{
+    padding-top:1.25em;
+}
+div#content.site-content{
+    margin-bottom:-4.5em;
+}
+
+
+  img.wp-image-1964{
+    margin:auto;
+    width:100%;
+  }
+}
+
 @media screen and (min-width: 768px){
  
     body{font-size: 20px;
 	font-size: 1.25rem;
     }
     
-    h1, h2, h3, h4, h5, h6 {
-        color:goldenrod;
+    h1, h3, h4, h5, h6 {
+        color:rgba(255, 185, 0,1);
     }
     
     .site-content{
@@ -1167,8 +1255,9 @@ header#masthead.site-header{
             height:100px;              
     }
     .site-branding a{
-            font-size:1em;
-            line-height:1em;
+            font-size:1.5em;
+            font-weight:700;
+            line-height:1.5em;
     }
     
     p.site-description{
@@ -1192,7 +1281,7 @@ header#masthead.site-header{
 	}
  
 .main-navigation ul li a{
-            padding: 0 1.5em; 
+            padding: 0 .9em; 
                 }
 
   .main-navigation a{
@@ -1205,6 +1294,90 @@ header#masthead.site-header{
     margin-top:0;
    }
    
+   /*=============POSTS============*/
+   
+   div.mapita{
+    width:100%;
+    z-index: -1;
+}
+   
+img.wp-image-1842.{
+    margin:0 -1em;
+    max-width:105%;
+}
+
+
+div.wp-block-image figure.fullwidth-image figure.aligncenter img.wp-image-2147{
+     display: none;
+   
+}  
+
+figure.wp-block-image img.wp-image-1920{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150%;
+}
+
+   iframe{
+    margin:0 auto;
+    height:500px;
+}
+
+iframe.fullwidth-image{
+    margin-top:4em;
+    display:flex;
+    justify-contents:center;
+}
+
+div.mapita{
+    max-width: 150%;
+}
+
+div#gmap-canvas{
+    width:40em;
+}
+
+.wp-block-image .aligncenter img.wp-image-1964{
+    display:inline;
+    width:57%;
+    float:right;
+    margin-right:1.5em;
+    margin-top:-10em;
+}
+
+.somos{
+    width:160px;
+}
+p.somos{
+    width:50%;
+    margin-right:2em;   
+}
+.wp-block-image .aligncenter img.wp-image-2092{
+    display:inline;
+    width:84%;
+    float:right;
+    margin-right:-7em;
+    margin-top:-11.5em;
+}
+p.somos2{
+    width:50%;
+    margin-right:2em;   
+    margin-top:-9.25em;
+}
+p.somos3{
+    width:50%;
+    margin-right:2em;   
+}
+.wp-block-image .aligncenter img.wp-image-2091{
+    display:inline;
+    width:89%;
+    float:right;
+    margin-right:-7.5em;
+    margin-top:-13.5em;
+    margin-bottom:-3em;
+}
+
 /*===========FOOTER===============*/
     
 footer{
@@ -1229,7 +1402,7 @@ div.footer-contact-name{
     }
 
 div.footer-contact{
-        font-size:1.25em;      
+        font-size:1em;      
         padding-bottom:2em;
     }
 
@@ -1241,7 +1414,7 @@ div.footer-contact{
 #social-media{
     width:50%;
     padding: .3em;
-    font-size:1.35em;
+    font-size:1.15em;
     margin:0 auto;  
     height:100px;
     justify-content:flex-end;
@@ -1251,8 +1424,7 @@ div.footer-contact{
     #social-media li {
        padding: .35em;
        background-color: #fff;
-       border-radius:8px;
- 
+       border-radius:8px; 
     }
     
     ul#social-media.menu{
@@ -1264,7 +1436,7 @@ div.footer-contact{
 
 @media screen and (min-width: 922px){
     
-    /*======HEADER MEDIUM==========*/
+    /*----------HEADER---------*/
     
     header#masthead.site-header{
             padding:2em 0 0 0;
@@ -1283,12 +1455,190 @@ div.footer-contact{
     }
     
     .main-navigation ul li a{
-        padding: 0 1.75em;
+            padding: 0 1.25em; 
+                }
+    
+    /*============POSTS============*/
+    
+    body,
+    input,
+    button,
+    select,
+    optgroup,
+    textarea{
+        font-size:1.5em;  
+}
+    .wp-block-image .fullwidth-image .aligncenter img.wp-image-1842{
+    margin: 0 auto;
+    max-width:120%;
+  }
+  
+   .wp-block-image  img.wp-image-1924{
+    margin-right:0;
+    max-width:45%;
+    float:right;
+    margin-top:-12em;
+  }
+  
+  .wp-block-image  img.wp-image-1920{
+    margin-right:0;
+    max-width:65%;
+ 
+  }
+  
+    .wp-block-image .aligncenter img.wp-image-1964{
+    display:inline;
+    width:100%;
+    float:right;
+    margin-right:-8em;
+    margin-top:-12em;
+}
+
+ iframe.fullwidth-image{
+     margin-top:4em;
+    display:flex;
+    justify-content:center;
+}
+
+    iframe{
+    margin:0 auto;
+    max-width:65%;
+    
+}
+
+    form{
+        font-size:.5em;  
+        max-width:75%;
     }
+    
+    p.address {
+        font-size:1.2em; 
+    }
+    
+
+p.somos{
+    width:48%;
+    margin-right:2em;   
+}
+.wp-block-image .aligncenter img.wp-image-2092{
+    display:inline;
+    width:84%;
+    float:right;
+    margin-right:-7em;
+    margin-top:-11.5em;
+}
+p.somos2{
+    width:48%;
+    margin-right:2em;   
+    margin-top:-4.75em;
+}
+p.somos3{
+    width:48%;
+    margin-right:2em;   
+}
+.wp-block-image .aligncenter img.wp-image-2091{
+    display:inline;
+    width:89%;
+    float:right;
+    margin-right:-7.5em;
+    margin-top:-16em;
+    margin-bottom:-3em;
+}
+    
     
     /*===========FOOTER===============*/
     
+    footer#colophon.site-footer{
+        padding-right:0;
+    }
     
+    .site-footer.site-info{
+        width:60%;
+        }
+    
+    #social-media{
+        list-style:none;
+        display:flex;
+        justify-content:flex-end;
+        margin:0;
+        }
+}    
+
+@media screen and (min-width: 1020px){
+    
+       
+/*----------HEADER---------*/
+    
+    div#content.site-content {
+	max-width: 1020px;
+        margin: 0 auto;
+}
+    
+    /*======navigation==========*/
+    
+    
+    .main-navigation ul li a{
+            padding: 0 1em; 
+                }
+    
+    /*============POSTS============*/
+    
+    body,
+    input,
+    button,
+    select,
+    optgroup,
+    textarea{
+        font-size:1.6em;  
+}
+
+    div#servicios,
+    div#casillero,
+    div#agentes,
+    div#rastreo,
+    div#contactenos,
+    div#compania{
+        height:100px;
+}
+
+
+   .wp-block-image  img.wp-image-1924{
+    padding-left:.25em;
+  }
+  
+    .wp-block-image .aligncenter img.wp-image-1964{
+    margin-right:-7em;
+}
+
+    p.address {
+        font-size:1.2em; 
+    }
+    
+    p.somos{
+        width:47%;  
+    }
+    .wp-block-image .aligncenter img.wp-image-2092{
+        margin-left:8em;
+    }
+    
+    p.somos2{
+        width:47%;
+        margin-top:-12em;
+    }
+    
+    p.somos3{
+        width:47%;
+    }
+    
+    .wp-block-image .aligncenter img.wp-image-2091{
+        margin-left:8em;
+        margin-top:-10em;
+        margin-bottom:-3em;
+    }
+    
+    
+}
+  
 /*--------------------------------------------------------------
 ## Captions
 --------------------------------------------------------------*/
