@@ -25,10 +25,10 @@
                         <li><?php printf( esc_html__(
                                 '5141 NW 79 Ave. Unit 9' ));?></li>
                         <li><?php printf( esc_html__(
-                                                'Miami, FL 33166' ));?></li>
-                        <li><?php printf( esc_html__(
+                                                'Doral, FL 33166' ));?></li>
+                        <li class="phone"><?php printf( esc_html__(
                                                 'Ph: +1 (305) 594 9011' ));?></li>
-                        <li><?php printf( esc_html__(
+                        <li class="phone"><?php printf( esc_html__(
                                                 'Bogotá: +57 (1) 489 9102' ));?></li>
                         <li><?php printf( esc_html__(
                                                 'sales@solaircargousa.com' ));
